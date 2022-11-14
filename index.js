@@ -3,7 +3,6 @@ showNotes();
 let addBtn=document.getElementById("addBtn");
 addBtn.addEventListener("click", function(a)
 {
-    console.log('h');
     let addTxt=document.getElementById("addTxt");
     let addTitle=document.getElementById("addTitle");
     let notes=localStorage.getItem("notes");
@@ -27,7 +26,6 @@ addBtn.addEventListener("click", function(a)
         text:addTxt.value,
         today:time
     }
-    console.log(myobj);
     notesObj.push(myobj);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value="";
